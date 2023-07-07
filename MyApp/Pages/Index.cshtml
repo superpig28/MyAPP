@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <div><span>MyKey1: </span><span>@Model.configuration.GetSection("MySetting").GetSection("MyKey1").Value</span></div>
+    <div><span>MyKey2: </span><span>@Model.configuration.GetSection("MySetting").GetSection("MyKey2").Value</span></div>
+    <div><span>Database: </span><span>@Model.userName</span></div>
+</div>
